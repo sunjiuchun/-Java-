@@ -1,0 +1,27 @@
+给Person类增加一个静态字段count和静态方法getCount
+public class Main {
+    public static void main(String[] args) {
+        //Person.count += 1;        
+        Person p1 = new Person("p1");        
+        System.out.println(Person.getCount());        
+        Person p2 = new Person("p2");        
+        System.out.println(Person.getCount());        
+        Person p3 = new Person("p3");        
+        System.out.println(Person.getCount());        
+        Person p4 = new Person("p4");        
+        System.out.println(Person.getCount());    
+    }
+}
+
+class Person{
+    String name;    
+    static int count =0;    
+    //构造函数不能加void    
+    public Person(String name){
+        count+=1;    
+    }
+
+    public static int getCount(){
+        return count;    
+    }
+}
